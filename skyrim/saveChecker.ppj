@@ -8,7 +8,6 @@
     Zip="true">
     <Variables>
         <Variable Name="ModName" Value="wabbaWidget"/>
-        <Variable Name="Version" Value="0.1"/>
         <Variable Name="MyProject" Value="."/>
         <Variable Name="Dist" Value="../bin"/>
     </Variables>
@@ -26,7 +25,7 @@
         <Folder>@MyProject\Scripts\Source</Folder>
     </Folders>
     <ZipFiles Output="@Dist">
-        <ZipFile Name="@ModName - @Version" RootDir="@MyProject" Compression="deflate">
+        <ZipFile Name="@ModName" RootDir="@MyProject" Compression="deflate">
              <Match>*.pex|*.psc|*.esp|*.swf|*.json</Match>
         </ZipFile>
     </ZipFiles>
