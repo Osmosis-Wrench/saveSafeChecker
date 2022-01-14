@@ -7,7 +7,7 @@
     Anonymize="true" 
     Zip="true">
     <Variables>
-        <Variable Name="ModName" Value="saveSafeChecker"/>
+        <Variable Name="ModName" Value="saveSafeChecker_loggingOnly"/>
         <Variable Name="MyProject" Value="."/>
         <Variable Name="Dist" Value="../bin"/>
     </Variables>
@@ -26,7 +26,7 @@
     </Folders>
     <ZipFiles Output="@Dist">
         <ZipFile Name="@ModName" RootDir="@MyProject" Compression="deflate">
-             <Match>*.pex|*.esp|</Match>
+             <Match>*.pex|*.esp|*.json</Match>
         </ZipFile>
     </ZipFiles>
 </PapyrusProject>
