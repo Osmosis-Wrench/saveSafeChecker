@@ -18,7 +18,8 @@ function saveCheck(float version, string modlistName)
 
         string wabbamessage = "You have tried to load a save made in an older or incompatible version of " + modlistName
         wabbamessage = wabbamessage + "\nSave version: "+get3dp(modlistVersion)+" - Modlist version: "+get3dp(version)
-        wabbamessage = wabbamessage + "\nIf you continue playing with this save, you will no longer get support."
+        wabbamessage = wabbamessage + "\nIf you continue playing with this save, you will probably experience bugs and errors."
+        wabbamessage = wabbamessage + "\nThis could result in save corruption."
         wabbamessage = wabbamessage + "\nDo you wish to continue?"
 
         ; I didn't put any resizing logic into the buttons so don't make these options too long.
