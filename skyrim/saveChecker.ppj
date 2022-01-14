@@ -7,7 +7,7 @@
     Anonymize="true" 
     Zip="true">
     <Variables>
-        <Variable Name="ModName" Value="wabbaWidget"/>
+        <Variable Name="ModName" Value="saveSafeChecker"/>
         <Variable Name="MyProject" Value="."/>
         <Variable Name="Dist" Value="../bin"/>
     </Variables>

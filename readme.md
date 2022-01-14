@@ -1,4 +1,4 @@
-# WabbaWidget
+# SaveSafeChecker
 
 ![example](https://github.com/Osmosis-Wrench/wabbaWidget/blob/main/example.png)
 
