@@ -18,6 +18,8 @@ Also, if you want a custom version of the widget for something else, or want to 
 
 ## How to use
 
+Ensure you have SKSE and JContainers installed.
+
 Edit ``ml.json`` to include your current major version number, and your modlist's name.
 So if your modlist's current version is version 4.20 and it's name is High Skyrim you would edit ``ml.json`` to read like follows:
 
