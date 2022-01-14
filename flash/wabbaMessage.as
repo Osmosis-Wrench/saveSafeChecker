@@ -19,6 +19,8 @@ class wabbaMessage extends MovieClip
 	var defaultOption: MovieClip;
 	var currentSelection: Boolean = true;
 	var moving: Boolean = false;
+	var acceptTextBox: TextField;
+	var cancelTextBox: TextField;
 	
 	function wabbaMessage()
 	{
@@ -61,14 +63,16 @@ class wabbaMessage extends MovieClip
 	
 	private function onLoad(): Void
 	{
-		//setText("My Modlist Name", "You have attempted to load a save made for an older or incompatible version of this modlist.");
 		this._visible = false;
+		//setText("My Modlist Name", "You have attempted to load a save made for an older or incompatible version of this modlist.", "poop", "ass");
 	}
 	
-	public function setText(modlistNameArg:String, modlistMessageArg:String): Void
+	public function setText(modlistNameArg:String, modlistMessageArg:String, cancelText:String, acceptText:String): Void
 	{
 		modListName.text = modlistNameArg;
 		modListMessage.text = modlistMessageArg;
+		cancelTextBox.text = cancelText;
+		acceptTextBox.text = acceptText;
 		this._visible = true;
 	}
 	

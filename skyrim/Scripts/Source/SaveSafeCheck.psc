@@ -16,13 +16,22 @@ function saveCheck(float version, string modlistName)
         registerForModEvent("wabbaMenu_Accept", "doAccept")
         registerForModEvent("wabbaMenu_Ignore", "doIgnore")
 
-        string wabbamessage = "You have attempted to load a save made for an older or incompatible version of this modlist.\nSave version: "+get3dp(modlistVersion)+" - Modlist version: "+get3dp(version)+"\nIf you continue playing with this save, you understand this voids you of any support queries.\nDo you wish to continue?"
+        string wabbamessage = "You have tried to load a save made in an older or incompatible version of " + modlistName
+        wabbamessage = wabbamessage + "\nSave version: "+get3dp(modlistVersion)+" - Modlist version: "+get3dp(version)
+        wabbamessage = wabbamessage + "\nIf you continue playing with this save, you will no longer get support."
+        wabbamessage = wabbamessage + "\nDo you wish to continue?"
+
+        ; I didn't put any resizing logic into the buttons so don't make these options too long.
+        string wabbaIgnore = "Yes"
+        string wabbaAccept = "No, take me back to the main menu!" 
 
         ui.openCustomMenu("wabbawidget/wabbaMessage")
         utility.waitmenumode(0.1)
         int x = uicallback.create("CustomMenu", "main.setText")
             UICallback.PushString(x, modlistName)
             UICallback.PushString(x, wabbamessage)
+            UICallback.PushString(x, wabbaIgnore)
+            UICallback.PushString(x, wabbaAccept)
         UICallback.Send(x)
     endif
 endFunction
