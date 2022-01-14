@@ -16,7 +16,7 @@ function saveCheck(float version, string modlistName)
         registerForModEvent("wabbaMenu_Accept", "doAccept")
         registerForModEvent("wabbaMenu_Ignore", "doIgnore")
 
-        string wabbamessage = "You have attempted to load a save made for an older or incompatible version of this modlist.\nSave version: "+modlistVersion+" - Modlist version: "+version+"\n If you continue playing with this save, you understand this voids you of any support queries.\nDo you wish to continue?"
+        string wabbamessage = "You have attempted to load a save made for an older or incompatible version of this modlist.\nSave version: "+get3dp(modlistVersion)+" - Modlist version: "+get3dp(version)+"\nIf you continue playing with this save, you understand this voids you of any support queries.\nDo you wish to continue?"
 
         ui.openCustomMenu("wabbawidget/wabbaMessage")
         utility.waitmenumode(0.1)
@@ -25,6 +25,12 @@ function saveCheck(float version, string modlistName)
             UICallback.PushString(x, wabbamessage)
         UICallback.Send(x)
     endif
+endFunction
+
+string function get3dp(float f)
+    string[] p = StringUtil.Split(f as string, ".")
+    string ret = p[0] + "."+ StringUtil.SubString(p[1], 0, 3)
+    return ret
 endFunction
 
 Event doAccept(string eventName, string strArg, float numArg, Form sender)
