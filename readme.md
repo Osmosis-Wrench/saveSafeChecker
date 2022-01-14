@@ -52,3 +52,28 @@ Make sure the value for ``modlistVersion`` is not inside quotation marks, and ha
  "modlistName": High Skyrim, // invalid
  "modlistName": "High' Skyrim, // invalid
  ```
+
+## Build Instructions
+
+First build flash, then build papyrus.
+
+### Flash
+
+1. Open ``.\flash\wabbaMessage.fla`` in adobe CS6.
+2. Hit Ctrl+Enter+f12 to publish
+
+This should automatically place the compiled swf in the correct location for the papyrus compiler.
+
+### Papyrus
+
+1. Download latest version of [Pyro](https://github.com/fireundubh/pyro/releases)
+2. Extract and add the extracted folder to your PATH. (You'll probably need to restart you PC.)
+3. Run ``.\b.bat`` and the project should be in ``.\bin\``
+
+If you have any issues with running `.\b.bat` you may need to generate a GitHub access token and change ``.\b.bat`` to read like this:
+
+```batch
+@Echo Off
+Pyro.exe --access-token YOUR_GITHUB_TOKEN_HERE --force-overwrite "skyrim\saveChecker.ppj"
+cmd /k
+```
