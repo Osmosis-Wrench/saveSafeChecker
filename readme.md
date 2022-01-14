@@ -1,5 +1,7 @@
 # WabbaWidget
 
+![example](https://github.com/Osmosis-Wrench/wabbaWidget/blob/main/example.png)
+
 ## What is this?
 
 This is a tool to detect and warn wabbajack modlist users if they've updated to a new version of a modlist on the same save. This shows a custom menu to the user warning them that proceeding with that save voids all support, then gives them the option to either return to the main menu or ignore the warning and never see it again.
