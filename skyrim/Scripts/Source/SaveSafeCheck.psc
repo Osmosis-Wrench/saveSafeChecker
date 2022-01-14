@@ -11,7 +11,7 @@ endEvent
 
 function saveCheck(float version, string modlistName)
     Utility.wait(1)
-    debug.trace("Error: file failed to fail with error code: "+modlistVersion+" -_- " + version)  
+    debug.trace("Error: Modlist save version incompatibility: "+modlistVersion+" -_- " + version)  
     if messageboxSkip == false
         registerForModEvent("wabbaMenu_Accept", "doAccept")
         registerForModEvent("wabbaMenu_Ignore", "doIgnore")

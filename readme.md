@@ -4,17 +4,15 @@
 
 ## What is this?
 
-This is a tool to detect and warn wabbajack modlist users if they've updated to a new version of a modlist on the same save. This shows a custom menu to the user warning them that proceeding with that save voids all support, then gives them the option to either return to the main menu or ignore the warning and never see it again.
+There are two builds of this project, a logging only and a message+logging version. If a user loads a save with a different major release number to their current modlist install version, it will either be logged to the console or it will show a message reminding the user that playing on an outdated save can result in save corruption. They are then given the option to ignore this warning, or return to the main menu to start a new game.
 
 Supports mouse and controller input.
 
-It also writes an error message to the users papyrus logs on every game load with an incorrect save version - modlist version match. If you want to check for this error, look for the following:
+Both version write an error message to the users papyrus logs on every game load with an incorrect save version - modlist version match. If you want to check for this error, look for the following:
 
 ```log
-    Error: file failed to fail with error code: SaveVersionNumber -_- ModlistVersionNumber
+    Error: Modlist save version incompatibility: SaveVersionNumber -_- ModlistVersionNumber
 ```
-
-Also, if you want a custom version of the widget for something else, or want to theme it to your modlist hmu in apoc and i'll help you out when I have time. Or feel free to fork and do whatever with the project. Should have everything you need to build the mod, including pyro project file.
 
 ## How to use
 
